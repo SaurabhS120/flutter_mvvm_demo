@@ -13,5 +13,11 @@ void main() {
       viewModel.increment();
       expect(viewModel.counter, 1);
     });
+
+    test('Text visibility test via ViewModel', () {
+      final viewModel = CounterViewModel();
+      viewModel.toggleTextVisibility();
+      expect(viewModel.isTextVisible, false);
+    });
   });
 }
