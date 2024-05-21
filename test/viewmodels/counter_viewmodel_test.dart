@@ -19,5 +19,16 @@ void main() {
       viewModel.toggleTextVisibility();
       expect(viewModel.isTextVisible, false);
     });
+
+    test('Initial text visibility should be true', () {
+      final viewModel = CounterViewModel();
+      expect(viewModel.isTextVisible, true);
+    });
+
+    test('Initial text visibility should false after toggle', () {
+      final viewModel = CounterViewModel();
+      viewModel.toggleTextVisibility();
+      expect(viewModel.isTextVisible, false);
+    });
   });
 }
